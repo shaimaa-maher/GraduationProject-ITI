@@ -1277,9 +1277,9 @@ padding-bottom: 160px;
 label{
   user-select: none;
 }
-input[type="radio"] {
+/* input[type="radio"] {
   display: none;
-}
+} */
 
 input[type="radio"] + label {
   z-index: 10;
