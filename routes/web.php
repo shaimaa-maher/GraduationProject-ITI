@@ -12,5 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+
+Route::get('/courses','ContentController@index')->name('courses.index');
+Route::get('/categories','CategoryController@index')->name('categories.index');
+Route::get('/courses/{course}','ContentController@view')->name('courses.view');
+
+
