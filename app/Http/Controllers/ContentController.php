@@ -15,7 +15,8 @@ class ContentController extends Controller
          
         // dd($category->contents[0]->pivot->content_id);
         return view('contents.index', [
-            'contents' => $category->contents
+            'contents' => $category->contents,
+            'categories' =>$category,
               
           
         ]);
