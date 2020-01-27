@@ -10,9 +10,11 @@ class Category extends Model
         'category_name'
     ];
     public function careers(){
-        return $this->belongsToMany(Career::class);
+        return $this->belongsToMany(Career::class,'career_id');
     }
+
+
     public function contents(){
-        return $this->belongsToMany(Content::class);
+        return $this->belongsToMany(Content::class,'category_content','category_id','content_id');
     }
 }

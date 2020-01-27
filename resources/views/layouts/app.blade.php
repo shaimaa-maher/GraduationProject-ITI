@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="fonts/line-icons/style.css">
     
     <script src="https://kit.fontawesome.com/118c5002ee.js" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
+ 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -39,7 +42,7 @@
 
 
         <!-- NAVBAR -->
-        <header class="site-navbar mt-3" id="top">
+        <header class="site-navbar" id="top">
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="site-logo col-6"><a href="index.html">Careery</a></div>
@@ -74,7 +77,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                top  <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
@@ -151,7 +154,7 @@
                                 </script> All rights reserved <i class="icon-heart text-danger" aria-hidden="true">
                                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </small></p>
-                    </div>
+                    </div>top
                 </div>
             </div>
         </footer>
@@ -175,8 +178,8 @@
     <script>
         var typed = new Typed('.typed-words', {
             strings: ["Career", "Job", "Future"],
-            typeSpeed: 80,
-            backSpeed: 80,
+            typeSpeed: 100,
+            backSpeed: 100,
             backDelay: 4000,
             startDelay: 1000,
             loop: true,
@@ -184,6 +187,8 @@
         });
     </script>
     <script src="js/mainscript.js"></script>
+
+
 
 </body>
 

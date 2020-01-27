@@ -12,14 +12,19 @@
                         <h1 data-aos="fade-up">Find Your <span class="typed-words"></span></h1>
                         <p></p>
                         <fieldset>
-                            <input type="text" id="filter" name="Searchbar" class="form-control" placeholder="What are you looking for?">
-                            <!--  <span id="filter-count"></span>-->
-                        </fieldset>
-                    </form>
+                            <div class="dropdown show">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Choose your career </a>
 
-                    <div class="col-lg-12 col-xl-2 ml-auto text-right">
-                        <input type="submit" class="btn text-white btn-primary" value="Search" name="searchbutton">
-                    </div>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    @foreach($jobs as $index => $job)
+                                    <a class="dropdown-item text-dark" href="/categories/{{$job['id']}}">{{$job['job_name']}}</a>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </fieldset>
 
                     </form>
                 </div>
@@ -28,5 +33,4 @@
     </div>
 
 </section>
-<br><br><br><br>
 @endsection

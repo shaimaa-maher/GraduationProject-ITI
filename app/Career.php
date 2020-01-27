@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Career extends Model
 {
     protected $fillable = [
-        'career_name'
+        'job_name'
     ];
     public function users(){
         return $this->belongsToMany(User::class);
     }
     public function categories(){
-        return $this->belongsToMany(Category::class);
+        return $this->belongsToMany(Category::class,'career_category','career_id','category_id');
     }
 }
