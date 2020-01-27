@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="text-center mb-4 mt-5">Categories</h1>
+<br><br><br><br>
+<h1 class="text-center">Categories</h1>
     
 <table class="table table-dark w-75 " style="margin-left:150px;">
   <thead>
@@ -26,5 +27,5 @@
     @endforeach
   </tbody>
 </table> 
-   
+<br><br><br><br><br> 
 @endsection

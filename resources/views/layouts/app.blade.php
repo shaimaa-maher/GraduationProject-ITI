@@ -6,17 +6,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="css/custom-bs.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-    <link rel="stylesheet" href="fonts/line-icons/style.css">
+    <link rel="stylesheet" href="/css/custom-bs.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="/fonts/line-icons/style.css">
     
     <script src="https://kit.fontawesome.com/118c5002ee.js" crossorigin="anonymous"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
  
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -42,14 +42,14 @@
 
 
         <!-- NAVBAR -->
-        <header class="site-navbar" id="top">
+        <header class="site-navbar top" id="top">
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="site-logo col-6"><a href="index.html">Careery</a></div>
 
                     <nav class="mx-auto site-navigation">
                         <ul class="site-menu js-clone-nav d-none d-lg-block">
-                            <li><a href="/" class="nav-link active">Home</a></li>
+                            <li><a href="/home" class="nav-link active">Home</a></li>
                             <li><a href="/about">About</a></li>
                             <li><a href="/portfolio">Portfolio</a></li>
                             <li class="has-children">
@@ -101,11 +101,6 @@
 
         @yield('content')
         <footer class="site-footer slanted-footer">
-
-            <a href="#top" class="smoothscroll scroll-top">
-                <span class="icon-keyboard_arrow_up"></span>
-            </a>
-
             <div class="container">
                 <div class="row mb-5">
                     <div class="col-6 col-md-3 mb-4 mb-md-0">
@@ -154,7 +149,7 @@
                                 </script> All rights reserved <i class="icon-heart text-danger" aria-hidden="true">
                                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </small></p>
-                    </div>top
+                    </div>
                 </div>
             </div>
         </footer>
@@ -163,18 +158,18 @@
 
 
     <!-- SCRIPTS -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/stickyfill.min.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="/js/stickyfill.min.js"></script>
+    <script src="/js/jquery.fancybox.min.js"></script>
+    <script src="/js/jquery.easing.1.3.js"></script>
 
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="/js/jquery.waypoints.min.js"></script>
+    <script src="/js/jquery.animateNumber.min.js"></script>
+    <script src="/js/custom.js"></script>
 
-    <script src="js/typed.js"></script>
+    <script src="/js/typed.js"></script>
     <script>
         var typed = new Typed('.typed-words', {
             strings: ["Career", "Job", "Future"],
@@ -186,7 +181,7 @@
             showCursor: true
         });
     </script>
-    <script src="js/mainscript.js"></script>
+    <script src="/js/mainscript.js"></script>
 
 
 
