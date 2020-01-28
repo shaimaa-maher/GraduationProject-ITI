@@ -1288,9 +1288,9 @@ margin-top: -1000px;
 label{
   user-select: none;
 }
-input[type="radio"] {
+/* input[type="radio"] {
   display: none;
-}
+} */
 
 input[type="radio"] + label {
   z-index: 10;

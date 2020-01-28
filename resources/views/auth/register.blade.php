@@ -8,7 +8,7 @@
             <div class="col-md-7">
                 <div class="form-wrap">
                     <h2 class="mb-5">Create new account</h2>
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-md-12 form-group">
@@ -83,10 +83,17 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row form-group ">
+                            <label for="photo" class="col-md-4 col-form-label text-md-right">{{ __('Your Image') }}</label>
+
+                            <div class="col-md-6">
+                                <input type="file" class="form-control @error('photo') is-invalid @enderror" name="image" required>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-md-12 ml-3 form-group">
                                 <div class="genderbox">
-                                    <input type="radio" name="gender"  value="male"><label for="male">Male</label>
+                                    <input type="radio" name="gender" value="male"><label for="male">Male</label>
                                     <input type="radio" name="gender" value="female"><label for="female">Female</label>
                                 </div>
                             </div>
