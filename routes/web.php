@@ -14,7 +14,9 @@
 
 
 Auth::routes();
-
+Route::get('/',function(){
+    return view('index');
+});
 Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
@@ -28,3 +30,12 @@ Route::get('/contents/{content}/view','ContentController@view')->name('contents.
 //Route::get('autocomplete', 'HomeController@search');
 //Route::get('search','HomeController@result');
 
+
+Route::get('/about',function(){
+    return view('about');
+});
+
+
+Route::get('/mindmaps',function(){
+    return view('mindmaps');
+});

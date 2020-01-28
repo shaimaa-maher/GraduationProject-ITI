@@ -22,4 +22,5 @@ $(document).ready(function(){
         var numberItems = count;
         $("#filter-count").text("Number of Filter = "+count);
     });
+    $('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
 });

@@ -13,7 +13,6 @@ class ContentController extends Controller
     {
          $category = Category::find($cat_id);
          
-        // dd($category->contents[0]->pivot->content_id);
         return view('contents.index', [
             'contents' => $category->contents,
             'categories' =>$category,

@@ -31,6 +31,11 @@
             </div>
         </div>
     </div>
-
+            <!-- VIDEO -->
+            <div class="video-container">
+                <video autoplay loop="true">
+                    <source type="video/mp4" src="/videos/video.mp4">
+                </video>
+            </div>
 </section>
 @endsection

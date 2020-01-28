@@ -5,7 +5,7 @@ header{
 .site-navbar {
   margin-bottom: 0px;
   z-index: 1999;
-  position: absolute;
+  position: fixed;
     background-color: #000d1a;
   width: 100%; }
   .site-navbar .container-fluid {
@@ -167,6 +167,14 @@ header{
           -webkit-transform: scale(1);
           -ms-transform: scale(1);
           transform: scale(1); }
+
+          .login {
+           
+          
+          }
+          .register{
+
+          }
 
 .site-mobile-menu {
   width: 300px;
@@ -586,9 +594,12 @@ padding-bottom: 160px;
   -webkit-box-shadow: none !important;
   box-shadow: none !important; }
 .btn.btn-primary{
-  margin-top: -70px;
-  margin-left: 120px;
+  margin-top: -10px;
+  margin-left: 0px;
 }
+/*.btn .search{
+margin-top: -1000px;
+}*/
 .btn.btn-primary:hover {
   background: #3395ff;
   border-color: #3395ff; }
@@ -1277,9 +1288,9 @@ padding-bottom: 160px;
 label{
   user-select: none;
 }
-/* input[type="radio"] {
+input[type="radio"] {
   display: none;
-} */
+}
 
 input[type="radio"] + label {
   z-index: 10;
@@ -1330,4 +1341,4 @@ input[type="radio"] + label {
   margin-top: -110px;
   margin-bottom: -1px;
 }
-
+/////////////////

@@ -4,28 +4,26 @@
 
 <br><br><br><br><br>
 <h1 class="text-center mb-4">{{$categories->category_name}} contents</h1>
-    
-<table class="table table-dark w-75 " style="margin-left:150px;">
-  <thead>
-    <tr>
-      <th scope="col">course-name</th>
-      <th scope="col">created at</th>
-      <th scope="col">updated at</th>
-      <th scope="col">Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-  @foreach($contents as  $value) 
-    <tr>
-      <td> {{$value->content_name}}</td>
-      <td>{{$value['created_at']}}</td>
-      <td>{{$value['updated_at']}}</td>
-      <td><a href="{{route('contents.view',['content' => $value->id ])}}" class="btn btn-info" >View</a></td>
-    </tr>
-   
-    @endforeach
-  </tbody>
-</table> 
-   
+<div class="row no-gutters ">
+  @foreach($contents as $value)
+  <div class="card m-4" style="max-width: 400px;">
+
+    <div class="row no-gutters">
+
+      <div class="col-md-4">
+        <!-- <img src="/images/sq_img_6.jpg" class="card-img " alt="photo"> -->
+        <img src="{{URL::to('/')}}/images/{{$value->image}}" class="img-fluid">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title text-primary">{{$value->content_name}}</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <a href="{{route('contents.view',['content' => $value->id ])}}" class="btn btn-outline-primary btn-lg">View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  @endforeach
+</div>
 <br><br><br>
 @endsection
