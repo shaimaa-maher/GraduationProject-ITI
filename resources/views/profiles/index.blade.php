@@ -22,7 +22,7 @@
                         @if(Auth::user()->image)
                         <img src="{{asset( Auth::user()->image )}}" class="rounded-circle img-thumbnail">
                         @else
-                        <img src="/image/avatar.png" class="rounded-circle img-thumbnail">
+                        <img src="/images/avatar.png" class="rounded-circle img-thumbnail">
                         @endif
                     </div>
                     <div class="col-md-12 profile-header">

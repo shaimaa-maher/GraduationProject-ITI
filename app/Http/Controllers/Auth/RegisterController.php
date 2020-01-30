@@ -58,7 +58,7 @@ class RegisterController extends Controller
             'country' => ['required', 'string', 'max:255'],
             'birthdate' => ['required', 'date'],
             'gender' => ['required'],
-            'image' => ['required','max:2048'],
+            'image' => ['max:2048'],
 
         ]);
     }
@@ -71,11 +71,15 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        
-        $request = app('request');
-        $path = $request->file('image')->store('images');
-        $request->image->move(public_path('images'), $path);
-        return User::create([
+         if (!isset($data['image'])) {
+            $path="/images/avatar.png";
+        }else{
+
+            $request = app('request');
+            $path = $request->file('image')->store('images');
+            $request->image->move(public_path('images'), $path);
+        }
+        $user= User::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
             'email' => $data['email'],
@@ -86,6 +90,10 @@ class RegisterController extends Controller
             'gender'=>$data['gender']
 
         ]);
+       
+
+        return $user;
+        
         // return redirect('welcome')->with('message',"SUCEESSSSSSS");
     }
 }
