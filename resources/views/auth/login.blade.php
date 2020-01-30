@@ -57,14 +57,14 @@
                     </form>
                     <div class="verticalline">
                         <h4 class="login-with">OR</h4>
+                        <div class="col-md-3">
+                        <a href="login/github" class="btn btn-dark text-light"><i class="fab fa-github"></i> Login with github</a>
+                        </div>
+                        <div class="col-md-3">
+                        <a href="login/google" class="btn btn-outline-primary d-inline-block"><i class="fab fa-google"></i> Login with Google</a>
+                        </div>
                     </div>
-                    <div class="sociallogin"> <a href="login/github" class="btn btn-dark text-light"> <i class="fab fa-github"></i> Login with github</a>
-
-                        <a href="login/google" class="btn btn-outline-primary"><i class="fab fa-google"></i> Login with Google</a>
-
-
-
-                    </div>
+                   
                 </div>
             </div>
         </div>

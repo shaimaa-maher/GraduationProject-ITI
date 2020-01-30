@@ -18,8 +18,16 @@ Route::get('/',function(){
     return view('index');
 });
 Route::get('/home', 'HomeController@index')->name('home');
-
 Auth::routes();
+
+
+//profiles
+Route::get('/profile','ProfileController@index')->name('profiles.index');
+//Route::get('/profile/{profile}/edit','ProfileController@edit')->name('profiles.edit');
+Route::get('/profile/edit','ProfileController@edit')->name('profiles.edit');
+Route::patch("/profile/update",'ProfileController@update')->name('profiles.update');
+
+
 //category-content
 Route::get('/contents/{cat_id}','ContentController@index')->name('contents.index');
 Route::get('/categories/{career_id}','CategoryController@index')->name('categories.index');
@@ -31,11 +39,13 @@ Route::get('/contents/{content}/view','ContentController@view')->name('contents.
 //Route::get('search','HomeController@result');
 
 
+//about
 Route::get('/about',function(){
     return view('about');
 });
 
 
+//mindmaps
 Route::get('/mindmaps',function(){
     return view('mindmaps');
 });

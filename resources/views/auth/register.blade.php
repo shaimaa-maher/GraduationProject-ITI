@@ -79,7 +79,7 @@
                                 <div class="form-group">
                                     <label for="birthdate" class="control-label">Enter your date of birth</label>
                                     <input id="birthdate" name="birthdate" class="form-control input-lg js-date--west" type="date" placeholder="_ _ /_ _ /_ _ _ _">
-                                    <!-- <p class="help-block">E.g. yyyy/mm/dd</p> -->
+                                    
                                 </div>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12 ml-3 form-group">
-                                <div class="genderbox">
+                                <div class="form-check">
                                     <input type="radio" name="gender" value="male"><label for="male">Male</label>
                                     <input type="radio" name="gender" value="female"><label for="female">Female</label>
                                 </div>
@@ -105,9 +105,6 @@
                                     Create new account
                                 </button>
                             </div>
-                        </div>
-
-                        <div class="row">
                             <div class="col-md-6 form-group">
 
                                 <a href="/login" class="btn btn-primary mt-2 px-5 ">Login instead</a>
@@ -115,6 +112,7 @@
                             </div>
                         </div>
 
+                        
                     </form>
                 </div>
             </div>

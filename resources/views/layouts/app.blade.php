@@ -13,7 +13,8 @@
 
     <script src="https://kit.fontawesome.com/118c5002ee.js" crossorigin="anonymous"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js">
+    </script>
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="/css/style.css">
@@ -41,7 +42,7 @@
         </div> <!-- .site-mobile-menu -->
 
 
-      <!-- NAVBAR -->
+        <!-- NAVBAR -->
         <header class="site-navbar" id="top">
             <div class="container-fluid">
                 <div class="row align-items-center">
@@ -69,24 +70,32 @@
                             @endif
                             @else
                             <li class="nav-item dropdown ">
-                                <a id="navbarDropdown" class="nav-link text-light dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link text-light dropdown-toggle" href="#"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    v-pre>
                                     {{ Auth::user()->first_name }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <img src="{{asset( Auth::user()->image )}}" class="rounded-circle" alt="...">  
-                                <a class="dropdown-item" href="/profile">Profile</a>
-
-                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    @if(Auth::user()->image)
+                                    <img src="{{asset( Auth::user()->image )}}" class="rounded-circle img-thumbnail">
+                                    @else
+                                    <img src="/image/avatar.png" class="rounded-circle img-thumbnail">
+                                    @endif
+                                    <p class="text-center"> {{ Auth::user()->first_name }} </p>
+                                    <a class="dropdown-item" href="/profile">Profile</a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                        style="display: none;">
                                         @csrf
                                     </form>
                                 </div>
                             </li>
+
                             @endguest
 
                         </ul>
@@ -147,11 +156,11 @@
                     <div class="col-12">
                         <p class="copyright">
                             <small class="block">
-                               
+
                                 Copyright &copy;<script>
-                                    document.write(new Date().getFullYear());
-                                </script> All rights reserved 
-                                    
+                                document.write(new Date().getFullYear());
+                                </script> All rights reserved
+
                             </small></p>
                     </div>
                 </div>
@@ -175,15 +184,15 @@
 
     <script src="/js/typed.js"></script>
     <script>
-        var typed = new Typed('.typed-words', {
-            strings: ["Career", "Job", "Future"],
-            typeSpeed: 100,
-            backSpeed: 100,
-            backDelay: 4000,
-            startDelay: 1000,
-            loop: true,
-            showCursor: true
-        });
+    var typed = new Typed('.typed-words', {
+        strings: ["Career", "Job", "Future"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 4000,
+        startDelay: 1000,
+        loop: true,
+        showCursor: true
+    });
     </script>
     <script src="/js/mainscript.js"></script>
 
