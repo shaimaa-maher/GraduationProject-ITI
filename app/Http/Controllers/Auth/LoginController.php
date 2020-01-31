@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Socialite;
-use App\User;
 
 class LoginController extends Controller
 {
@@ -58,11 +58,12 @@ class LoginController extends Controller
 
     public function createUser($userInfo, $provider)
     {
-        $newUser=User::where('provider_id', $userInfo->id)->first();
+        $user=User::where('provider_id', $userInfo->id)->first();
 
-        if (!$newUser) {
+        if ($user) {auth()->login($user, true);}
+        else{
             if ($provider=='github') {
-                $newUser=User::create([
+                $user=User::create([
                     'first_name'=>$userInfo->nickname,
                     'email'    => $userInfo->email,
                     'provider' => $provider,
@@ -71,20 +72,24 @@ class LoginController extends Controller
                     'last_name'=>"undefined",
                     'password'=>"undefined",
                     'birthdate'=>"1900-01-01",
-                    'country'=>"undefined",
-                    
-                    
+                    'country'=>"undefined",                    
                 ]);
+                // auth()->login($user, true);
+
             } elseif ($provider=='google') {
-                $newUser=User::create([
-                    'first_name'=>$userInfo->name,
-                    // 'last_name'=>null,
+                $user=User::create([
+                    'first_name'=>$userInfo->user["given_name"],
+                    'last_name'=>$userInfo->user["family_name"],
                     'email'    => $userInfo->email,
                     'provider' => $provider,
                     'provider_id' => $userInfo->id,
+                    'image'=>$userInfo->getAvatar(),                    
+                    'password'=>"undefined",
+                    'birthdate'=>"1900-01-01",
+                    'country'=>"undefined", 
                 ]);
             }
         }
-        return $newUser;
+        return $user;
     }
 }
