@@ -69,10 +69,7 @@ class LoginController extends Controller
                     'provider' => $provider,
                     'provider_id' => $userInfo->id,
                     'image'=>$userInfo->avatar,
-                    'last_name'=>"undefined",
-                    'password'=>"undefined",
-                    'birthdate'=>"1900-01-01",
-                    'country'=>"undefined",                    
+                                       
                 ]);
                 // auth()->login($user, true);
 
@@ -84,9 +81,7 @@ class LoginController extends Controller
                     'provider' => $provider,
                     'provider_id' => $userInfo->id,
                     'image'=>$userInfo->getAvatar(),                    
-                    'password'=>"undefined",
-                    'birthdate'=>"1900-01-01",
-                    'country'=>"undefined", 
+                    
                 ]);
             }
         }
