@@ -2,6 +2,14 @@
 header{
  background-color: #000d1a;
 }
+
+#dropdownMenuLink{
+  width: 400px;
+  height: 40px;
+  font-size: large;
+}
+
+
 .site-navbar {
   margin-bottom: 0px;
   z-index: 1999;

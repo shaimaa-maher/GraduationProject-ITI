@@ -14,7 +14,7 @@ class HomeController extends Controller
      * @return void
      */
     public function __construct()
-    {
+    {   
         $this->middleware('auth');
     }
 
@@ -35,13 +35,12 @@ class HomeController extends Controller
 
 
    
-    // public function result(Request $request)
-    // {
-    //       dd($request);
-        
-    //     $result= Career::all()->where('job_name', 'LIKE', "%{$request->input('query')}%")->get();
-    //     return response()->json($result);
-    // } 
+    public function autocomplete(Request $request)
+    {
+        $data = Career::select("job_name as name")->where("job_name","LIKE","%{$request->input('query')}%")->get();
+        return response()->json($data);
+    }
+
 
 
 }

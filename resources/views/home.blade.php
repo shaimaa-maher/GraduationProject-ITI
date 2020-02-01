@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <!-- HOME -->
 <section class="home-section section-hero overlay slanted" id="home-section">
 
@@ -13,29 +14,47 @@
                         <p></p>
                         <fieldset>
                             <div class="dropdown show">
-                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
-                                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
+                                <a class="btn btn-secondary  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Choose your career </a>
 
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <div class="dropdown-menu dropdown-menu-search"  aria-labelledby="dropdownMenuLink">
                                     @foreach($jobs as $index => $job)
-                                    <a class="dropdown-item text-dark" href="/categories/{{$job['id']}}">{{$job['job_name']}}</a>
+                                    <a class="dropdown-item text-info" href="/categories/{{$job['id']}}">{{$job['job_name']}}</a>
                                     @endforeach
                                 </div>
                             </div>
                         </fieldset>
+
+                        <!-- <div class="container">
+
+                            <h1>Choose your career </h1>
+                            <input class="typeahead form-control" style="margin:0px auto;width:300px;" type="text">
+                        </div>
+                        <script type="text/javascript">
+                            var path = "{{ route('autocomplete') }}";
+                            $('input.typeahead').typeahead({
+                                source: function(query, process) {
+                                    return $.get(path, {
+                                        query: query
+                                    }, function(data) {
+                                        return process(data);
+                                    });
+                                }
+                            });
+                        </script> -->
+
+
 
                     </form>
                 </div>
             </div>
         </div>
     </div>
-            <!-- VIDEO -->
-            <div class="video-container">
-                <video autoplay loop="true">
-                    <source type="video/mp4" src="/videos/video.mp4">
-                </video>
-            </div>
+    <!-- VIDEO -->
+    <div class="video-container">
+        <video autoplay loop="true">
+            <source type="video/mp4" src="/videos/video.mp4">
+        </video>
+    </div>
 </section>
 @endsection

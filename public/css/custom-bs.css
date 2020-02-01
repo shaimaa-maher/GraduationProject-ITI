@@ -2551,13 +2551,39 @@ input[type="button"].btn-block {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: #7f848c;
+  color: #7f93b3;
   text-align: left;
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem; }
+  border-radius: 10px;
+  
+ }
+ .dropdown-menu-search{
+  overflow-y:scroll ;
+  height: 150px;
+}
+ 
+
+ .dropdown-menu-search::-webkit-scrollbar {
+  width: 20px;
+
+  
+ }
+ .dropdown-menu-search::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+
+.dropdown-menu-search::-webkit-scrollbar-thumb {
+  background:var(--blue); 
+  border-radius: 10px;
+}
+
+.dropdown-menu-search::-webkit-scrollbar-thumb:hover {
+  background:#004285; 
+}
 
 .dropdown-menu-left {
   right: auto;
@@ -2566,6 +2592,15 @@ input[type="button"].btn-block {
 .dropdown-menu-right {
   right: 0;
   left: auto; }
+
+  @media (max-width: 500px) {
+    .dropdown-menu-scroll
+    {
+          height:100px;
+          overflow-y:auto;
+    }
+
+    }
 
 @media (min-width: 576px) {
   .dropdown-menu-sm-left {

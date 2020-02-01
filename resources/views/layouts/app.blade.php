@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="/fonts/icomoon/style.css">
     <link rel="stylesheet" href="/fonts/line-icons/style.css">
+    
 
     <script src="https://kit.fontawesome.com/118c5002ee.js" crossorigin="anonymous"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
@@ -46,7 +47,7 @@
         <header class="site-navbar" id="top">
             <div class="container-fluid">
                 <div class="row align-items-center">
-                    <div class="site-logo col-6"><a href="index.html">Careery</a></div>
+                    <div class="site-logo col-6"><a href="/home">Careery</a></div>
 
                     <nav class="mx-auto site-navigation">
                         <ul class="site-menu js-clone-nav d-none d-lg-block">

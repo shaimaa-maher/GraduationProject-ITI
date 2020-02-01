@@ -64,3 +64,10 @@ Route::get('/faq',function(){
 Route::get('/contactus',function(){
     return view('contact');
 });
+
+
+
+
+//autocomplete
+//Route::get('home',array('as'=>'home','uses'=>'HomeController@search'));
+Route::get('autocomplete',array('as'=>'autocomplete','uses'=>'HomeController@autocomplete'));
