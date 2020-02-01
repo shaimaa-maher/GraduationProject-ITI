@@ -112,7 +112,6 @@ header{
           transition: 0s all;
           color: #000d1a; }
           .site-navbar .site-navigation .site-menu .has-children .dropdown a.active {
-            background: #3395ff;
             color: #3395ff; }
         .site-navbar .site-navigation .site-menu .has-children .dropdown > li {
           list-style: none;
@@ -1341,4 +1340,4 @@ input[type="radio"] + label {
   margin-top: -110px;
   margin-bottom: -1px;
 }
-/////////////////
+

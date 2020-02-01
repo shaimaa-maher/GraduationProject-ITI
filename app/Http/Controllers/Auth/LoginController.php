@@ -71,7 +71,7 @@ class LoginController extends Controller
                     'image'=>$userInfo->avatar,
                                        
                 ]);
-                // auth()->login($user, true);
+               
 
             } elseif ($provider=='google') {
                 $user=User::create([

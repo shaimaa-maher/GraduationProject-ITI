@@ -14,7 +14,7 @@ class AddLinksColToContentsTable extends Migration
     public function up()
     {
         Schema::table('contents', function (Blueprint $table) {
-            $table->string('links')->nullable();
+            $table->longText('links')->nullable();
         });
     }
 

@@ -53,3 +53,9 @@ Route::get('/mindmaps',function(){
 //login with anotheer providers
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
+
+
+//faq
+Route::get('/faq',function(){
+    return view('frequent');
+});

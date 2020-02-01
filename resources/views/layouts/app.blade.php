@@ -57,7 +57,7 @@
                                 <ul class="dropdown">
 
 
-                                    <li><a href="#">Frequently Ask Questions</a></li>
+                                    <li><a href="/faq">Frequently Ask Questions</a></li>
                                     <li><a href="/about">About</a></li>
                                     <li><a href="#">Contact</a></li>
                                 </ul>
