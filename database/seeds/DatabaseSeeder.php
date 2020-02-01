@@ -30,11 +30,11 @@ class DatabaseSeeder extends Seeder
         DB::table('careers')->insert(
             [
                 [
-                    'id' => '1',
-                    'job_name' => 'web dev'
+                    'id' => '',
+                    'job_name' => ''
                 ],
                 [
-                    'id' => '2',
+                    'id' => '',
                     'job_name' => ''
                 ],
                 

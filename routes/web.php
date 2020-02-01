@@ -59,3 +59,8 @@ Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCall
 Route::get('/faq',function(){
     return view('frequent');
 });
+
+//contactus
+Route::get('/contactus',function(){
+    return view('contact');
+});
