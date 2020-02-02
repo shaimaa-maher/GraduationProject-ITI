@@ -78,4 +78,6 @@ Route::get('/add-career',function(){
 });
 
 
-Route::post('/add-career','addCareerController@store')->name("add-career");
+Route::post('/add-career','addCareerController@storeCareer')->name("addcareer");
+Route::post('/add-career/category','addCareerController@storeCategory');
+Route::post('/add-career/content','addCareerController@storeContent');
