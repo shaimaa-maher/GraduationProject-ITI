@@ -9,12 +9,27 @@ header{
   font-size: large;
 }
 
+.add-career{
+color:#007bff;
+border-radius: 10px;
+margin:15px;
+}
+.add-career > input{
+ border-radius: 8px;
+}
+.add-career > p{
+  color: navy;
+}
 
+/* 
+.add-career-content{
+  margin-left: 400px;
+} */
 .site-navbar {
   margin-bottom: 0px;
   z-index: 1999;
-  position: fixed;
-    background-color: #000d1a;
+  position: sticky;
+  background-color: #000d1a;
   width: 100%; }
   .site-navbar .container-fluid {
     padding-left: 7rem;
@@ -1199,7 +1214,9 @@ margin-top: -1000px;
   .categories li.active a, .sidelink li.active a {
     color: #000;
     font-style: italic; }
-
+.form-search-wrap{
+  margin-bottom: 200px;
+}
 .comment-form-wrap {
   clear: both; }
 

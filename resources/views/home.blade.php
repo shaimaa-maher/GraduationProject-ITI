@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-md-8 text-center">
-                <div class="form-search-wrap p-2" data-aos="fade-up" data-aos-delay="200">
+                <div class="form-search-wrap p-2 " data-aos="fade-up" data-aos-delay="200">
                     <form method="post" id="live-search" action="coursesview.html">
                         <h1 data-aos="fade-up">Find Your <span class="typed-words"></span></h1>
                         <p></p>
