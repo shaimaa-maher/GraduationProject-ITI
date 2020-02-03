@@ -27,6 +27,29 @@ margin:15px;
   color: navy;
 }
 
+.message{
+  border-radius: 10px;
+  margin:15px;
+  width: 500px;
+  margin: auto;
+  background-color: #343a40;
+  }
+  .message-hr{
+  width: 300px;
+  margin-left: 0;
+  }
+  .message-title{
+    color: rgb(36, 63, 182);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .career-title{
+    text-align: center;
+    color: #007bff; 
+  }
+
 /* 
 .add-career-content{
   margin-left: 400px;

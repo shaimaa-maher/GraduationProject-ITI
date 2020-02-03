@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<h1 class="career-title"> ADD A CAREER</h1>
 <div class="row m-auto no-gutters">
     <div class="col-6">
         <form method="POST" action="/add-career">
@@ -22,7 +22,7 @@
 
 
     <div class="col-6">
-        <form method="POST" action="/add-career/category" enctype="multipart/form-data" >
+        <form method="POST" action="/add-career/category" enctype="multipart/form-data">
             @csrf
 
             <fieldset class="add-career  ">
@@ -62,6 +62,50 @@
         </form>
     </div>
 </div>
+
+<h1 class="career-title mt-5"> ASSIGNMENT</h1>
+
+<div class="row m-auto no-gutters">
+    <div class="col-6">
+        <form method="POST" action="/add-career">
+            @csrf
+            <fieldset class="add-career">
+                <legend>Career-category:</legend>
+                <p>assign the career </p> <input name="job_name" type="text">
+                <p>To </p>
+                <p>the category</p> <input name="job_name" type="text">
+
+                <input type="submit" class="btn btn-info ml-2 " value="Assign">
+            </fieldset>
+            @if(session()->has('careermessage'))
+            <div class="alert alert-success">
+                {{ session()->get('careermessage') }}
+            </div>
+            @endif
+        </form>
+
+    </div>
+    <div class="col-6">
+        <form method="POST" action="/add-career">
+            @csrf
+            <fieldset class="add-career">
+                <legend>Category-content:</legend>
+                <p>assign the category </p> <input name="job_name" type="text">
+                <p>To </p>
+                <p>the content</p> <input name="job_name" type="text">
+
+                <input type="submit" class="btn btn-info ml-2  " value="Assign">
+            </fieldset>
+            @if(session()->has('careermessage'))
+            <div class="alert alert-success">
+                {{ session()->get('careermessage') }}
+            </div>
+            @endif
+        </form>
+    </div>
+</div>
+
+
 
 <br><br><br>
 @endsection

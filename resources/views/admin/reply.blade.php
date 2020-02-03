@@ -11,8 +11,6 @@
     </div>
     @endif
     <input type="email" value="{{$msg['email']}}" name="email" readonly hidden>
-
-
     <br>
     <textarea rows="4" cols="50" type="text" name="replymsg"></textarea>
     <br>

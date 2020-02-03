@@ -10,10 +10,10 @@
     <div class="table-responsive m-5">
         <table class="table table-hover mb-5">
            
-            <thead>
+            <thead class="thead-dark">
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First Name</th>
+                    <th scope="col">No</th>
+                    <th scope="col"> Name</th>
                     <th scope="col">Subject</th>
                     <th scope="col">Actions</th>
                 </tr>
