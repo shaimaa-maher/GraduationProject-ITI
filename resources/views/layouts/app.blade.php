@@ -97,7 +97,7 @@
                                 </div>
                             </li>
                             <li> <a href="/add-career" class="nav-link">Add new career</a></li>
-                            <li> <a href="#" class="nav-link">View Messages</a></li>
+                            <li> <a href="/viewmessages" class="nav-link">View Messages</a></li>
 
                             @endguest
 

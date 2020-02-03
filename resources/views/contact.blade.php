@@ -48,6 +48,7 @@
               <input type="submit" value="Send Message" class="btn btn-primary btn-md text-white">
             </div>
           </div>
+
           @if(session()->has('contactmessage'))
           <div class="alert alert-success">
             {{ session()->get('contactmessage') }}

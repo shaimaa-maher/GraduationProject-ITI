@@ -64,6 +64,7 @@ Route::get('/faq',function(){
 Route::get('/contactus',function(){
     return view('contact');
 })->name('contactus');
+Route::post('/contactus','MessageController@create');
 
 
 
@@ -72,14 +73,17 @@ Route::get('/contactus',function(){
 //Route::get('home',array('as'=>'home','uses'=>'HomeController@search'));
 Route::get('autocomplete',array('as'=>'autocomplete','uses'=>'HomeController@autocomplete'));
 
-//add career data
-Route::get('/add-career',function(){
-    return view('admin.add_career');
-});
 
 
 Route::post('/add-career','addCareerController@storeCareer')->name("addcareer");
 Route::post('/add-career/category','addCareerController@storeCategory');
 Route::post('/add-career/content','addCareerController@storeContent');
 
-Route::post('/contactus','MessageController@create');
+//  ADMIN 
+//add career data
+Route::get('/add-career',function(){
+    return view('admin.add_career');
+});
+
+
+Route::get('/viewmessages', 'MessageController@index')->name('view_messages');
