@@ -8,7 +8,11 @@
       <div class="col-lg-6 mb-5 mb-lg-0">
         <form method="post" action="/contactus">
           @csrf
-
+          @if(session()->has('contactmessage'))
+          <div class="alert alert-success">
+            {{ session()->get('contactmessage') }}
+          </div>
+          @endif
           <div class="row form-group">
             <div class="col-md-6 mb-3 mb-md-0">
               <label class="text-black" for="fname">First Name</label>
@@ -49,11 +53,7 @@
             </div>
           </div>
 
-          @if(session()->has('contactmessage'))
-          <div class="alert alert-success">
-            {{ session()->get('contactmessage') }}
-          </div>
-          @endif
+        
 
         </form>
       </div>

@@ -88,3 +88,6 @@ Route::get('/add-career',function(){
 
 Route::get('/viewmessages', 'MessageController@index')->name('view_messages');
 Route::get('/viewmessages/{msg}', 'MessageController@show')->name('msgs.show');
+
+Route::get('/reply/{msg}', 'MessageController@reply')->name('reply');
+Route::post('/reply/{msg}', 'MessageController@sendMail')->name('sendMail');

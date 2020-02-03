@@ -8,16 +8,13 @@
             <p class="font-weight-bold">{{$msg['first_name']}} {{$msg['last_name']}}</p>
             <p class="font-italic">{{$msg['email']}}</p>
         </div>
-
+        
         <div class="card-body">
             <h5 class="card-title font-weight-bold">{{$msg['subject']}}</h5>
             <p class="card-text text-center">{{$msg['message']}}</p>
         </div>
-        <form action="">
-            @csrf
-            <button class="btn btn-outline-secondary" type="submit">Reply to this email</button>
+        <a class="btn btn-outline-secondary" href="{{route('reply',['msg' => $msg['id'] ])}}">Reply to this email</a>
 
-        </form>
     </div>
 
 </div>
