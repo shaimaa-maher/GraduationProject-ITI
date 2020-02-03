@@ -29,4 +29,9 @@ class messageController extends Controller
         ]);
         
     }
+
+    public function show($id)
+    {
+        Message::find($id);
+    }
 }

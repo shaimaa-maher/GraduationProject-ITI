@@ -12,18 +12,18 @@
                     <form method="post" id="live-search" action="coursesview.html">
                         <h1 data-aos="fade-up">Find Your <span class="typed-words"></span></h1>
                         <p></p>
-                        <fieldset>
+                        
                             <div class="dropdown show">
-                                <a class="btn btn-secondary  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="btn btn-primary  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Choose your career </a>
 
                                 <div class="dropdown-menu dropdown-menu-search"  aria-labelledby="dropdownMenuLink">
                                     @foreach($jobs as $index => $job)
-                                    <a class="dropdown-item text-info" href="/categories/{{$job['id']}}">{{$job['job_name']}}</a>
+                                    <a class="dropdown-item text-dark" href="/categories/{{$job['id']}}">{{$job['job_name']}}</a>
                                     @endforeach
                                 </div>
                             </div>
-                        </fieldset>
+                        
 
                         <!-- <div class="container">
 

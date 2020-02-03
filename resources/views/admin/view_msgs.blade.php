@@ -21,7 +21,7 @@
                     <td>{{$msg['first_name']}}</td>
                     <td>{{$msg['subject']}}</td>
                     
-                    <td><a class="btn btn-outline-secondary"href="#">View</a></td>
+                    <td><a class="btn btn-outline-secondary" href="{{route('msgs.show',['msg' => $msg['id'] ])}}">View</a></td>
                 </tr>
                 @endforeach
 

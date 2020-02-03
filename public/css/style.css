@@ -9,7 +9,12 @@ header {
     height: 40px;
     font-size: large;
 }
-
+ul.typeahed.dropdown-menu :li a{
+    color:black;
+}
+ul.typeahed.dropdown-menu :li a:hover{
+    color:rgba(0, 0, 0, 0.1);
+}
 .add-career{
 color:#007bff;
 border-radius: 10px;
