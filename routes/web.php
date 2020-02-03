@@ -71,3 +71,13 @@ Route::get('/contactus',function(){
 //autocomplete
 //Route::get('home',array('as'=>'home','uses'=>'HomeController@search'));
 Route::get('autocomplete',array('as'=>'autocomplete','uses'=>'HomeController@autocomplete'));
+
+//add career data
+Route::get('/add-career',function(){
+    return view('admin.add_career');
+});
+
+
+Route::post('/add-career','addCareerController@storeCareer')->name("addcareer");
+Route::post('/add-career/category','addCareerController@storeCategory');
+Route::post('/add-career/content','addCareerController@storeContent');

@@ -251,7 +251,7 @@ input[type="month"] {
 textarea {
   overflow: auto;
   resize: vertical; }
-
+/* 
 fieldset {
   min-width: 0;
   padding: 0;
@@ -267,7 +267,7 @@ legend {
   font-size: 1.5rem;
   line-height: inherit;
   color: inherit;
-  white-space: normal; }
+  white-space: normal; } */
 
 progress {
   vertical-align: baseline; }
@@ -349,10 +349,10 @@ h6, .h6 {
   line-height: 1.2; }
 
 hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+ font-weight: 800px;
+ width: 1200px;
+ border: 0.8px solid #007eff;
+ }
 
 small,
 .small {

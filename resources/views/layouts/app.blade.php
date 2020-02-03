@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="/fonts/icomoon/style.css">
     <link rel="stylesheet" href="/fonts/line-icons/style.css">
-    
+
 
     <script src="https://kit.fontawesome.com/118c5002ee.js" crossorigin="anonymous"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
@@ -96,6 +96,8 @@
                                     </form>
                                 </div>
                             </li>
+                            <li> <a href="/add-career" class="nav-link">Add new career</a></li>
+                            <li> <a href="#" class="nav-link">View Messages</a></li>
 
                             @endguest
 
