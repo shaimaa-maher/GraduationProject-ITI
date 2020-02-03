@@ -49,7 +49,7 @@ class messageController extends Controller
     {
         // dd(request('email'));
         Mail::raw('congrattttttttttts', function ($message) {
-            $message->from('Careery@careery.com')
+            $message
             ->to(request('email'))
             ->subject('HELLO THERE!');
         });
