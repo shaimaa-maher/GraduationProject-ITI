@@ -35,4 +35,6 @@
         
     </div>
 </div>
+{{ $msgs->links() }}
+
 @endsection

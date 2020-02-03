@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -25,8 +24,9 @@ class messageController extends Controller
 
     public function index()
     {
+        $msgs = Message::paginate(5);
         return view('admin.view_msgs', [
-            'msgs' => Message::all()
+            'msgs' => $msgs
 
         ]);
     }
