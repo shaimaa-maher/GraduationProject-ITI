@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+@if(session()->has('replyMsg'))
+    <div class="alert alert-success">
+        {{ session()->get('replyMsg') }}
+    </div>
+    @endif
 <div class="container m-5 text-center">
     <div class="table-responsive m-5">
         <table class="table table-hover mb-5">

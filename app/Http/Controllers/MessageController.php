@@ -47,12 +47,12 @@ class messageController extends Controller
 
     public function sendMail()
     {
-        // dd(request('email'));
-        Mail::raw('congrattttttttttts', function ($message) {
+        // dd(request('replymsg'));
+        Mail::raw(request('replymsg'), function ($message) {
             $message
             ->to(request('email'))
-            ->subject('HELLO THERE!');
+            ->subject('HELLO THERE WITH TEXTAREA!');
         });
-        return redirect('/home');
+        return redirect()->route("view_messages")->with('replyMsg','Reply Sent Successfuly  TO '.request('email'));
     }
 }
