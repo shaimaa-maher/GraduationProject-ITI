@@ -63,7 +63,7 @@ Route::get('/faq',function(){
 //contactus
 Route::get('/contactus',function(){
     return view('contact');
-});
+})->name('contactus');
 
 
 
@@ -81,3 +81,5 @@ Route::get('/add-career',function(){
 Route::post('/add-career','addCareerController@storeCareer')->name("addcareer");
 Route::post('/add-career/category','addCareerController@storeCategory');
 Route::post('/add-career/content','addCareerController@storeContent');
+
+Route::post('/contactus','MessageController@create');
