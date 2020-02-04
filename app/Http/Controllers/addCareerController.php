@@ -9,6 +9,8 @@ use App\Content;
 
 class addCareerController extends Controller
 {
+
+    //store career
     public  function storeCareer(Request $request)
     { 
         
@@ -19,6 +21,8 @@ class addCareerController extends Controller
         return redirect()->route('addcareer')->with('careermessage',$request->job_name." ".' Career added!');
     }
     
+
+    //store category
     public  function storeCategory(Request $request)
     { 
         // dd($request->image);
@@ -40,7 +44,9 @@ class addCareerController extends Controller
 
     }
 
+    
 
+    //store content
     public  function storeContent(Request $request)
     { 
         if (!isset($request->image)) {
@@ -59,8 +65,32 @@ class addCareerController extends Controller
             ]);
 
             return redirect()->route('addcareer')->with('contentmessage',$request->content_name." ".' Content added!');
+    }
+
+
+    public function index()
+    { 
+        return view('admin.add_career',[
+            'jobs'=> Career::all(),
+            'categories'=>Category::all(),
+            'contents'=>Content::all(),
+        ]);
+    }
+
+    //choose from the drop dwon menu and store in the input
+
+    public function AssignCareerCategory(Request $request)
+    {
+        //dd($request);
+        Category::create(
+           [ 'career_id' => $request->career_id ,
+             'category_id' => $request->career_category_id,
+           ]);
+           return redirect()->route('add.Career')->with('careercategorymessage',$request->career_id.' assigned to'.$request->career_category_id);
+        
 
 
     }
 
+    
 }
