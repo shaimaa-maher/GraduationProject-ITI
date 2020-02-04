@@ -85,6 +85,7 @@ Route::post('/add-career/content','addCareerController@storeContent');
 //add career data
 Route::get('/add-career', 'addCareerController@index')->name('add.Career');
 Route::post('/add-career/assign_career_category', 'addCareerController@AssignCareerCategory')->name('assign.category');
+Route::post('/add-career/assign_category_content', 'addCareerController@AssignCategoryContent')->name('assign.content');
 
 
 

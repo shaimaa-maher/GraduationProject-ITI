@@ -20,7 +20,7 @@ class CreateContentsTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('category_content', function (Blueprint $table) {
+        Schema::create('category_contents', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('content_id');

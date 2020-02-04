@@ -13,6 +13,6 @@ class Career extends Model
         return $this->belongsToMany(User::class);
     }
     public function categories(){
-        return $this->belongsToMany(Category::class,'career_category','career_id','category_id');
+        return $this->belongsToMany(Category::class,'career_categories','career_id','category_id');
     }
 }

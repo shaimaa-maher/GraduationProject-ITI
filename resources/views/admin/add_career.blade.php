@@ -77,10 +77,10 @@
 
                 <select name="job_name" class="form-control Career">
                     @foreach($jobs as $index => $job)
-                    <option value="{{$job->id}}">{{$job->job_name}}</option>
+                    <option value="{{$job->id}}" selected>{{$job->job_name}}</option>
                     @endforeach
                 </select>
-                <input name="career_id" id="career_id" type="text" value="" readonly>
+                <input name="career_id" id="career_id" type="text" value="" hidden>
                 <p>To the category</p>
 
                 <select name="category_name" class="form-control assigncategory">
@@ -88,7 +88,7 @@
                     <option value="{{$cat->id}}">{{$cat->category_name}}</option>
                     @endforeach
                 </select>
-                <input name="career_category_id" id="career_category_id" type="text" readonly>
+                <input name="career_category_id" id="career_category_id" type="text" hidden>
                 <input type="submit" class="btn btn-info ml-2 " value="Assign">
             </fieldset>
             @if(session()->has('careercategorymessage'))
@@ -101,7 +101,7 @@
 
 
     <div class="col-6">
-        <form method="POST" action="/add-career/assigncontent">
+        <form method="POST" action="/add-career/assign_category_content">
             @csrf
             <fieldset class="add-career">
                 <legend>Category-content:</legend>
@@ -111,19 +111,19 @@
                     <option value="{{$cat->id}}">{{$cat->category_name}}</option>
                     @endforeach
                 </select>
-                <input name="category_id" id="category_id" type="text" readonly>
+                <input name="category_id" id="category_id" type="text" hidden>
                 <p>To the content</p>
                 <select name="category_name" class="form-control assigncontent">
                     @foreach($contents as $index => $con)
                     <option value="{{$con->id}}">{{$con['content_name']}}</option>
                     @endforeach
                 </select>
-                <input name="category_content_id" id="category_content_id" type="text" readonly>
+                <input name="category_content_id" id="category_content_id" type="text" hidden>
                 <input type="submit" class="btn btn-info ml-2  " value="Assign">
             </fieldset>
             @if(session()->has('categorycontentmessage'))
             <div class="alert alert-success">
-                {{ session()->get('categorycontentmessage') }}
+             {{ session()->get('categorycontentmessage') }}
             </div>
             @endif
         </form>

@@ -15,6 +15,6 @@ class Category extends Model
 
 
     public function contents(){
-        return $this->belongsToMany(Content::class,'category_content','category_id','content_id');
+        return $this->belongsToMany(Content::class,'category_contents','category_id','content_id');
     }
 }

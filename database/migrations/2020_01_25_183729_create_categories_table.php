@@ -19,7 +19,7 @@ class CreateCategoriesTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('career_category', function (Blueprint $table) {
+        Schema::create('career_categories', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('career_id');
             $table->unsignedBigInteger('category_id');

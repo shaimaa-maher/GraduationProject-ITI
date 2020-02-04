@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Career;
 use App\Category;
 use App\Content;
+use App\career_category;
+use App\category_content;
+
 
 class addCareerController extends Controller
 {
@@ -82,14 +85,24 @@ class addCareerController extends Controller
     public function AssignCareerCategory(Request $request)
     {
         //dd($request);
-        Category::create(
+        career_category::create(
            [ 'career_id' => $request->career_id ,
              'category_id' => $request->career_category_id,
            ]);
            return redirect()->route('add.Career')->with('careercategorymessage',$request->career_id.' assigned to'.$request->career_category_id);
-        
+
+    }
 
 
+    public function AssignCategoryContent(Request $request)
+    {
+        //dd($request);
+        category_content::create(
+           [ 'category_id' => $request->category_id ,
+             'content_id' => $request->category_content_id,
+           ]);
+           return redirect()->route('add.Career')->with('categorycontentmessage',$request->category_id.' assigned to'. $request->category_content_id);
+  
     }
 
     
