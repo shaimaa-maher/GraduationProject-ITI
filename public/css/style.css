@@ -9,6 +9,12 @@ header {
     height: 40px;
     font-size: large;
 }
+
+.dropdown-menu-add-career{
+    width: 200px;
+    height: 40px;
+    
+}
 ul.typeahed.dropdown-menu :li a{
     color:black;
 }
@@ -30,19 +36,20 @@ margin:15px;
 .message{
   border-radius: 10px;
   margin:15px;
-  width: 500px;
+  width: 400px;
   margin: auto;
-  background-color:bisque;
+  background-color:rgb(249, 250, 245);
   }
   .message-hr{
   width: 300px;
   margin-left: 0;
   }
   .message-title{
-    color: rgb(36, 63, 182);
+    color: #007bff;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+    margin: auto;
   }
 
   .career-title{

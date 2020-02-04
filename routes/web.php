@@ -79,15 +79,21 @@ Route::post('/add-career','addCareerController@storeCareer')->name("addcareer");
 Route::post('/add-career/category','addCareerController@storeCategory');
 Route::post('/add-career/content','addCareerController@storeContent');
 
-//  ADMIN 
+                                         //  ADMIN //
+
+
 //add career data
-Route::get('/add-career',function(){
-    return view('admin.add_career');
-});
+Route::get('/add-career', 'addCareerController@index')->name('add.Career');
+Route::post('/add-career/assign_career_category', 'addCareerController@AssignCareerCategory')->name('assign.category');
 
 
+
+//view messages
 Route::get('/viewmessages', 'MessageController@index')->name('view_messages');
 Route::get('/viewmessages/{msg}', 'MessageController@show')->name('msgs.show');
 
+
+
+//relpy messages
 Route::get('/reply/{msg}', 'MessageController@reply')->name('reply');
 Route::post('/reply/{msg}', 'MessageController@sendMail')->name('sendMail');

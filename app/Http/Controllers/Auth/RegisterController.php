@@ -58,7 +58,7 @@ class RegisterController extends Controller
             'country' => ['required', 'string', 'max:255'],
             'birthdate' => ['required', 'date'],
             'gender' => ['required'],
-            'image' => ['max:2048'],
+            'image' => ['max:2048'], 
 
         ]);
     }
