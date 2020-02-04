@@ -199,4 +199,27 @@ jQuery(function($) {
 
 	}
 	counterInit(); 
+
+
+//ADMIN ASSIGN
+
+$("select.Career").change(function() {
+	$('#career_id').val($(this).children("option:selected").val());
+
+});
+
+	$("select.assigncategory").change(function() {
+        $('#career_category_id').val($(this).children("option:selected").val());
+
+	});
+	
+	$("select.category").change(function() {
+        $('#category_id').val($(this).children("option:selected").val());
+
+	});
+	
+	$("select.assigncontent").change(function() {
+        $('#category_content_id').val($(this).children("option:selected").val());
+
+    });
 });

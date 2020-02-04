@@ -134,40 +134,4 @@
 
 <br><br><br>
 
-<script>
-$(document).ready(function() {
-    $("select.Career").change(function() {
-        $('#career_id').val($(this).children("option:selected").val());
-
-    });
-});
-</script>
-
-<script>
-$(document).ready(function() {
-    $("select.assigncategory").change(function() {
-        $('#career_category_id').val($(this).children("option:selected").val());
-
-    });
-});
-</script>
-
-
-<script>
-$(document).ready(function() {
-    $("select.category").change(function() {
-        $('#category_id').val($(this).children("option:selected").val());
-
-    });
-});
-</script>
-
-<script>
-$(document).ready(function() {
-    $("select.assigncontent").change(function() {
-        $('#category_content_id').val($(this).children("option:selected").val());
-
-    });
-});
-</script>
 @endsection
