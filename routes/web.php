@@ -69,36 +69,34 @@ Route::post('/contactus','MessageController@create');
 
 
 
-//autocomplete
-//Route::get('home',array('as'=>'home','uses'=>'HomeController@search'));
+//autocomplete 
 Route::get('autocomplete',array('as'=>'autocomplete','uses'=>'HomeController@autocomplete'));
 
 
-
-Route::post('/add-career','addCareerController@storeCareer')->name("addcareer");
-Route::post('/add-career/category','addCareerController@storeCategory');
-Route::post('/add-career/content','addCareerController@storeContent');
-
+                                          ////////////
                                          //  ADMIN //
+                                        ////////////
 
+//control career
+Route::get('/control', 'CareerController@index')->name('control');
+Route::get('/control/add','CareerController@add')->name('control.Add');
+//add
+Route::post('/add-career','CareerController@storeCareer')->name("addcareer");
+Route::post('/add-career/category','CareerController@storeCategory');
+Route::post('/add-career/content','CareerController@storeContent');
+//assign
+Route::post('/add-career/assign_career_category', 'CareerController@AssignCareerCategory')->name('assign.category');
+Route::post('/add-career/assign_category_content', 'CareerController@AssignCategoryContent')->name('assign.content');
 
-//add career data
-Route::get('/add-career', 'addCareerController@index')->name('add.Career');
-Route::post('/add-career/assign_career_category', 'addCareerController@AssignCareerCategory')->name('assign.category');
-Route::post('/add-career/assign_category_content', 'addCareerController@AssignCategoryContent')->name('assign.content');
-
-
+  
 
 //view messages
 Route::get('/viewmessages', 'MessageController@index')->name('view_messages');
 Route::get('/viewmessages/{msg}', 'MessageController@show')->name('msgs.show');
 
-
-
 //relpy messages
 Route::get('/reply/{msg}', 'MessageController@reply')->name('reply');
 Route::post('/reply/{msg}', 'MessageController@sendMail')->name('sendMail');
-
 
 //charts
 Route::get('/charts', 'ChartsController@index');

@@ -15,5 +15,5 @@
     <textarea rows="4" cols="50" type="text" name="replymsg" class="m-5 "></textarea>
     <br>
     <button class="btn btn-outline-info m-5" type="submit">Send Reply</button>
-</form>
+</form> 
 @endsection

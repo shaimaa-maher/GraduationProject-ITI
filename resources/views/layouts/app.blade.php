@@ -84,7 +84,13 @@
                                     <img src="/image/avatar.png" class="rounded-circle img-thumbnail">
                                     @endif
                                     <p class="text-center"> {{ Auth::user()->first_name }} </p>
+                                    
                                     <a class="dropdown-item" href="/profile">Profile</a>
+                                    @if(Auth::user()->role)
+                                     <a href="/control" class="dropdown-item">Conrol Career</a>
+                                     <a href="/viewmessages" class="dropdown-item">Messages</a>
+                                     <a href="/charts" class="dropdown-item">Charts</a>
+                                     @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
@@ -95,11 +101,7 @@
                                     </form>
                                 </div>
                             </li>
-                            @if(Auth::user()->role)
-                            <li> <a href="/add-career" class="nav-link">Add new career</a></li>
-                            <li> <a href="/viewmessages" class="nav-link">View Messages</a></li>
-                            <li> <a href="/charts" class="nav-link">Charts</a></li>
-                            @endif
+                            
                             @endguest
 
                         </ul>

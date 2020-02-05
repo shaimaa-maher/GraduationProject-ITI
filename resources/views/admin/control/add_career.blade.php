@@ -19,7 +19,7 @@
         </form>
 
     </div>
-
+ 
 
     <div class="col-6">
         <form method="POST" action="/add-career/category" enctype="multipart/form-data">

@@ -18,14 +18,14 @@ class messageController extends Controller
             'message' => $request->message,
 
         ]);
-        return redirect()->route('contactus')->with('contactmessage', "Thanks " . $request->first_name . " " . ' Your msg is sent!');
+        return redirect()->route('contactus')->with('contactmessage', "Thanks " . $request->first_name . " " . ' Your message is sent!');
     }
-
+ 
 
     public function index()
     {
         $msgs = Message::paginate(5);
-        return view('admin.view_msgs', [
+        return view('admin.messages.view_msgs', [
             'msgs' => $msgs
 
         ]);
@@ -35,14 +35,14 @@ class messageController extends Controller
     {
         $msg = Message::find($id);
 
-        return view('admin.show', ['msg' => $msg]);
+        return view('admin.messages.show', ['msg' => $msg]);
     }
 
     public function reply($id)
     {
         $msg = Message::find($id);
 
-        return view('admin.reply', ['msg' => $msg]);
+        return view('admin.messages.reply', ['msg' => $msg]);
     }
 
     public function sendMail()
