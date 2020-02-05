@@ -3,7 +3,10 @@
 header {
     background-color: #000d1a;
 }
-
+.box{
+    width:800px;
+    margin:0 auto;
+   }
 textarea {
     width: 60%;
     height: 150px;

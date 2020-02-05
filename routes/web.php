@@ -98,3 +98,7 @@ Route::get('/viewmessages/{msg}', 'MessageController@show')->name('msgs.show');
 //relpy messages
 Route::get('/reply/{msg}', 'MessageController@reply')->name('reply');
 Route::post('/reply/{msg}', 'MessageController@sendMail')->name('sendMail');
+
+
+//charts
+Route::get('/charts', 'ChartsController@index');

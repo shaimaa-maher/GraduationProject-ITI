@@ -14,7 +14,26 @@
 
     <script src="https://kit.fontawesome.com/118c5002ee.js" crossorigin="anonymous"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"> </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+        var analytics = <?php echo $gender; ?>
+
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable(analytics);
+            var options = {
+                title: 'Percentage of Male and Female Users'
+            };
+            var chart = new google.visualization.PieChart(document.getElementById('pie_chart'));
+            chart.draw(data, options);
+        }
     </script>
 
     <!-- MAIN CSS -->
@@ -71,9 +90,7 @@
                             @endif
                             @else
                             <li class="nav-item dropdown ">
-                                <a id="navbarDropdown" class="nav-link text-light dropdown-toggle" href="#"
-                                    role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                    v-pre>
+                                <a id="navbarDropdown" class="nav-link text-light dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->first_name }} <span class="caret"></span>
                                 </a>
 
@@ -90,8 +107,7 @@
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                        style="display: none;">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                                 </div>
@@ -162,7 +178,7 @@
                             <small class="block">
 
                                 Copyright &copy;<script>
-                                document.write(new Date().getFullYear());
+                                    document.write(new Date().getFullYear());
                                 </script> All rights reserved
 
                             </small></p>
@@ -188,15 +204,15 @@
 
     <script src="/js/typed.js"></script>
     <script>
-    var typed = new Typed('.typed-words', {
-        strings: ["Career", "Job", "Future"],
-        typeSpeed: 100,
-        backSpeed: 100,
-        backDelay: 4000,
-        startDelay: 1000,
-        loop: true,
-        showCursor: true
-    });
+        var typed = new Typed('.typed-words', {
+            strings: ["Career", "Job", "Future"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 4000,
+            startDelay: 1000,
+            loop: true,
+            showCursor: true
+        });
     </script>
     <script src="/js/mainscript.js"></script>
 

@@ -221,5 +221,9 @@ $("select.Career").change(function() {
 	$("select.assigncontent").change(function() {
         $('#category_content_id').val($(this).children("option:selected").val());
 
-    });
+	});
+	
+
+
+	
 });
