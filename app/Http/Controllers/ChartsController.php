@@ -7,19 +7,36 @@ use DB;
 
 class ChartsController extends Controller
 {
-    function index()
-    {
-     $data = DB::table('users')
-       ->select(
+  public function index()
+  {
+    $data = DB::table('users')
+      ->select(
         DB::raw('gender as gender'),
-        DB::raw('count(*) as number'))
-       ->groupBy('gender')
-       ->get();
-     $array[] = ['Gender', 'Number'];
-     foreach($data as $key => $value)
-     {
-      $array[++$key] = [$value->gender, $value->number];
-     }
-     return view('admin.google_pie_chart')->with('gender', json_encode($array));
+        DB::raw('count(*) as number')
+      )
+      ->groupBy('gender')
+      ->get();
+    $genderArray[] = ['Gender', 'Number'];
+    foreach ($data as $key => $value) {
+      $genderArray[++$key] = [$value->gender, $value->number];
     }
+
+    ////////////
+    //country
+    ///////////////
+    $countryData = DB::table('users')
+      ->select(
+        DB::raw('country as country'),
+        DB::raw('count(*) as number')
+      )
+      ->groupBy('country')
+      ->get();
+    $countryArray[] = ['country', 'Number'];
+    foreach ($countryData as $key => $value) {
+      $countryArray[++$key] = [$value->country, $value->number];
+    }
+
+    return view('admin.charts')->with('gender', json_encode($genderArray))
+      ->with('country', json_encode($countryArray));
+  }
 }

@@ -3,9 +3,10 @@
 header {
     background-color: #000d1a;
 }
-.box{
-    width:800px;
-    margin:0 auto;
+.chartbox{
+    width:350px;
+    height:350px;
+    margin-bottom: 80px;
    }
 textarea {
     width: 60%;
