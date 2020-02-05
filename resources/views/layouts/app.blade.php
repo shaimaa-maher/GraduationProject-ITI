@@ -115,6 +115,7 @@
                             @if(Auth::user()->role)
                             <li> <a href="/add-career" class="nav-link">Add new career</a></li>
                             <li> <a href="/viewmessages" class="nav-link">View Messages</a></li>
+                            <li> <a href="/charts" class="nav-link">Charts</a></li>
                             @endif
                             @endguest
 
