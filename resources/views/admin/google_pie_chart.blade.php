@@ -4,19 +4,37 @@
 
 
   <br />
-  <div class="container"> 
+  <div class="container-fluid"> 
    <div class="panel panel-default">
     <div class="panel-heading">
      <h3 class="panel-title">Percentage of Male and Female Users</h3>
     </div>
     <div class="panel-body">
-     <div id="pie_chart" style="width:750px; height:450px;">
+     <div id="pie_chart" style="width:390px; height:390px;">
 
      </div>
     </div>
    </div>
    
   </div>
+  <script type="text/javascript">
+        var analytics = <?php echo $gender; ?>
+
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable(analytics);
+            var options = {
+                title: 'Percentage of Male and Female Users'
+            };
+            var chart = new google.visualization.PieChart(document.getElementById('pie_chart'));
+            chart.draw(data, options);
+        }
+    </script>
   @endsection
 
 

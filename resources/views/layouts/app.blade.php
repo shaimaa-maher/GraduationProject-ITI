@@ -17,24 +17,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"> </script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-    <script type="text/javascript">
-        var analytics = <?php echo $gender; ?>
-
-        google.charts.load('current', {
-            'packages': ['corechart']
-        });
-
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable(analytics);
-            var options = {
-                title: 'Percentage of Male and Female Users'
-            };
-            var chart = new google.visualization.PieChart(document.getElementById('pie_chart'));
-            chart.draw(data, options);
-        }
-    </script>
+   
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="/css/style.css">
@@ -115,6 +98,7 @@
                             @if(Auth::user()->role)
                             <li> <a href="/add-career" class="nav-link">Add new career</a></li>
                             <li> <a href="/viewmessages" class="nav-link">View Messages</a></li>
+                            <li> <a href="/charts" class="nav-link">Charts</a></li>
                             @endif
                             @endguest
 
