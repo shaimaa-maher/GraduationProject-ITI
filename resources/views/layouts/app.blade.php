@@ -96,9 +96,10 @@
                                     </form>
                                 </div>
                             </li>
+                            @if(Auth::user()->role)
                             <li> <a href="/add-career" class="nav-link">Add new career</a></li>
                             <li> <a href="/viewmessages" class="nav-link">View Messages</a></li>
-
+                            @endif
                             @endguest
 
                         </ul>

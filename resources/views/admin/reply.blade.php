@@ -12,8 +12,8 @@
     @endif
     <input type="email" value="{{$msg['email']}}" name="email" readonly hidden>
     <br>
-    <textarea rows="4" cols="50" type="text" name="replymsg"></textarea>
+    <textarea rows="4" cols="50" type="text" name="replymsg" class="m-5 "></textarea>
     <br>
-    <button class="btn btn-outline-info" type="submit">Send Email</button>
+    <button class="btn btn-outline-info m-5" type="submit">Send Reply</button>
 </form>
 @endsection

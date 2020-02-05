@@ -2,8 +2,7 @@
 
 @section('content')
 
-<br><br><br><br><br>
-<h1 class="text-center mb-4">{{$categories->category_name}} contents</h1>
+<h1 class="text-center m-5">{{$categories->category_name}} contents</h1>
 <div class="row no-gutters ">
   @foreach($contents as $value)
   <div class="card m-4" style="max-width: 400px;">

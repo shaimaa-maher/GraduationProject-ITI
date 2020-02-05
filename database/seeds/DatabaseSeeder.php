@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             'birthdate' => '1996-08-04',
             'gender' => 'female',
             'image' => 'https://avatars3.githubusercontent.com/u/58627253?v=4',
+            'role'=>'admin',
             'remember_token' => Str::random(10),
 
         ]);

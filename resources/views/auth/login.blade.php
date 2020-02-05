@@ -58,10 +58,10 @@
                     <div class="verticalline">
                         <h4 class="login-with">OR</h4>
                         <div class="col-md-3">
-                        <a href="login/github" class="btn btn-dark text-light"><i class="fab fa-github"></i> </a>
+                        <a href="login/github" class="btn btn-dark text-light"><i class="fab fa-github" style="font-size: 50px"></i> </a>
                         </div>
                         <div class="col-md-3">
-                        <a href="login/google" class="btn btn-outline-primary d-inline-block"><i class="fab fa-google"></i> </a>
+                        <a href="login/google" class="btn btn-outline-primary"><i class="fab fa-google" style="font-size: 50px"></i> </a>
                         </div>
                     </div>
                    
