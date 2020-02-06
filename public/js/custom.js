@@ -223,7 +223,17 @@ $("select.Career").change(function() {
 
 	});
 	
+//modify career
+$("select.ModifyCareer").change(function() {
+	$('#job_id').val($(this).children("option:selected").val());
 
+});
+
+//modify category
+$("select.ModifyCategory").change(function() {
+	$('#cat_id').val($(this).children("option:selected").val());
+
+});
 
 	
 });

@@ -77,7 +77,7 @@ Route::get('autocomplete',array('as'=>'autocomplete','uses'=>'HomeController@aut
                                          //  ADMIN //
                                         ////////////
 
-//control career
+//control career//
 Route::get('/control', 'CareerController@index')->name('control');
 Route::get('/control/add','CareerController@add')->name('control.Add');
 //add
@@ -87,6 +87,11 @@ Route::post('/add-career/content','CareerController@storeContent');
 //assign
 Route::post('/add-career/assign_career_category', 'CareerController@AssignCareerCategory')->name('assign.category');
 Route::post('/add-career/assign_category_content', 'CareerController@AssignCategoryContent')->name('assign.content');
+//modification
+Route::get('/Edit', 'CareerController@edit')->name('edit');
+Route::get('/Modify', 'CareerController@ModifyMainTables')->name('ModifyMain');
+Route::post('/Modify/career', 'CareerController@ModifyCareer')->name('ModifyCareer');
+Route::post('/Modify/category', 'CareerController@ModifyCategory')->name('ModifyCategory');
 
   
 

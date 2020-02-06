@@ -12,7 +12,7 @@
                 </a>
             </div>
             <div class="item web col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-                <a href="#" class="item-wrap">
+                <a href="/Edit" class="item-wrap">
                     <span class="icon-add"></span>
                     <img class="img-fluid" src="images/edit.png">
                 </a>

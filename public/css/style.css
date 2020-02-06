@@ -19,6 +19,18 @@ textarea {
     resize: none;
   }
 
+.modifycard
+{
+ margin-left: 90px;
+}
+
+.modifyCareer{
+  margin-left: 90px;
+  color: #007bff;
+  border-radius: 10px;
+ 
+}
+
 #dropdownMenuLink {
     width: 400px;
     height: 40px;

@@ -17,12 +17,12 @@ class ContentController extends Controller
             'contents' => $category->contents,
             'categories' =>$category,
               
-          
+           
         ]);
     }
 
     public function view($content)
-    {
+    { 
 
         return view('contents.view',[
             'course'=> Content::find($content),

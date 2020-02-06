@@ -123,9 +123,53 @@ class CareerController extends Controller
                                             //////////////////////////////////////////////////
                                             
                                             
+   
+    public function edit()
+    { 
+        return view('admin.control.edit');
+    }
+
+
+    public function modifyMainTables()
+    { 
+        return view('admin.control.modify_main_tables',[
+            'jobs'=> Career::all(),
+            'categories'=>Category::all(),
+            'contents'=>Content::all(),
+        ]);
+    }
+
+    public function ModifyCareer(Request $request)
+    {
+       $id=$request->job_id;
+       $career = Career::find($id);
+       $career->update(
+           ['job_name' => $request->job_name,]
+       );
+       
+       return redirect()->route('ModifyMain')->with('careerModifymessage','Career Modified Successfully !');
+
+    }
 
 
 
+    public function ModifyCategory(Request $request)
+    {  
+       $path = $request->file('image')->store('images');
+       $request->image->move(public_path('images'), $path);
 
-      
+       $id=$request->cat_id;
+       $category = Category::find($id);
+       $category->update(
+           [
+            'category_name' => $request->category_name,
+            'image'=>$path
+           ]
+       );
+       
+       return redirect()->route('ModifyMain')->with('categorymodifymessage','Category Modified Successfully !');
+
+    }
+
+  
 }

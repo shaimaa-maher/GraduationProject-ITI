@@ -87,8 +87,8 @@
                                     
                                     <a class="dropdown-item" href="/profile">Profile</a>
                                     @if(Auth::user()->role)
-                                     <a href="/control" class="dropdown-item">Conrol Career</a>
-                                     <a href="/viewmessages" class="dropdown-item">Messages</a>
+                                     <a href="/control" class="dropdown-item">Control Career</a>
+                                     <a href="/viewmessages" class="dropdown-item">Messages<span class="badge badge-dark">4</span></a>
                                      <a href="/charts" class="dropdown-item">Charts</a>
                                      @endif
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
