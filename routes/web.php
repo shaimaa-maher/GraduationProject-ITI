@@ -17,21 +17,21 @@ Auth::routes();
 Route::get('/',function(){
     return view('index');
 });
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 Auth::routes();
 
 
 //profiles
-Route::get('/profile','ProfileController@index')->name('profiles.index');
+Route::get('/profile','ProfileController@index')->name('profiles.index')->middleware('auth');
 //Route::get('/profile/{profile}/edit','ProfileController@edit')->name('profiles.edit');
-Route::get('/profile/edit','ProfileController@edit')->name('profiles.edit');
-Route::patch("/profile/update",'ProfileController@update')->name('profiles.update');
+Route::get('/profile/edit','ProfileController@edit')->name('profiles.edit')->middleware('auth');
+Route::patch("/profile/update",'ProfileController@update')->name('profiles.update')->middleware('auth');
 
 
 //category-content
-Route::get('/contents/{cat_id}','ContentController@index')->name('contents.index');
-Route::get('/categories/{career_id}','CategoryController@index')->name('categories.index');
-Route::get('/contents/{content}/view','ContentController@view')->name('contents.view');
+Route::get('/contents/{cat_id}','ContentController@index')->name('contents.index')->middleware('auth');
+Route::get('/categories/{career_id}','CategoryController@index')->name('categories.index')->middleware('auth');
+Route::get('/contents/{content}/view','ContentController@view')->name('contents.view')->middleware('auth');
 
 //search
 
@@ -76,7 +76,7 @@ Route::get('autocomplete',array('as'=>'autocomplete','uses'=>'HomeController@aut
                                           ////////////
                                          //  ADMIN //
                                         ////////////
-
+Route::group(['middleware' => ['auth']], function () {
 //control career//
 Route::get('/control', 'CareerController@index')->name('control');
 Route::get('/control/add','CareerController@add')->name('control.Add');
@@ -92,8 +92,7 @@ Route::get('/Edit', 'CareerController@edit')->name('edit');
 Route::get('/Modify', 'CareerController@ModifyMainTables')->name('ModifyMain');
 Route::post('/Modify/career', 'CareerController@ModifyCareer')->name('ModifyCareer');
 Route::post('/Modify/category', 'CareerController@ModifyCategory')->name('ModifyCategory');
-
-  
+Route::post('/Modify/content', 'CareerController@ModifyContent')->name('ModifyContent');
 
 //view messages
 Route::get('/viewmessages', 'MessageController@index')->name('view_messages');
@@ -105,3 +104,4 @@ Route::post('/reply/{msg}', 'MessageController@sendMail')->name('sendMail');
 
 //charts
 Route::get('/charts', 'ChartsController@index');
+});

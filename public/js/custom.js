@@ -235,5 +235,11 @@ $("select.ModifyCategory").change(function() {
 
 });
 
+//modify content
+$("select.ModifyContent").change(function() {
+	$('#con_id').val($(this).children("option:selected").val());
+
+});
+
 	
 });

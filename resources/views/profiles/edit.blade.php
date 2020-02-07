@@ -33,7 +33,7 @@
         </div>
         <!--/col-3-->
         <div class="col-sm-9">
-            <h3 class="text-danger">personal information</h1>
+            <h3 class="text-primary">Personal Information</h1>
 
 
                 <div class="tab-content">

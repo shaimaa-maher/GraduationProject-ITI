@@ -51,7 +51,35 @@
         </form>
     </div>
 
+</div>
 
+<div class="row m-auto no-gutters ">
+    <div class="col-6 ">
+        <form method="POST" action="/Modify/content" enctype="multipart/form-data">
+            @csrf
+
+            <fieldset class="add-career-content add-career">
+                <legend>Content:</legend>
+                <select name="content_name" class="form-control ModifyContent">
+                    @foreach($contents as $index => $con)
+                    <option value="{{$con->id}}">{{$con->content_name}}</option>
+                    @endforeach
+                </select>
+                <input type="text" id="con_id" name="con_id" hidden>
+
+                <p>Content Name:</p> <input name="content_name" type="text"><br><br>
+                <p>Content details:</p> <input name="content_details" type="text"><br><br>
+                <p>Content links:</p> <input name="links" type="text"><br><br>
+                <p>Content image:</p> <input name="image" type="file"><br><br>
+                <input type="submit" class="btn btn-info " value="Modify Content">
+            </fieldset>
+            @if(session()->has('contentmodifymessage'))
+            <div class="alert alert-success">
+                {{ session()->get('contentmodifymessage') }}
+            </div>
+            @endif
+        </form>
+    </div>
 </div>
 <br><br><br><br>
 

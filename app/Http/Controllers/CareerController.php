@@ -119,7 +119,7 @@ class CareerController extends Controller
 
 
                                             ////////////////////////////////////////////////////
-                                            //edit career - category - content - relationship//
+                                            //        edit career - category - content       //
                                             //////////////////////////////////////////////////
                                             
                                             
@@ -168,6 +168,27 @@ class CareerController extends Controller
        );
        
        return redirect()->route('ModifyMain')->with('categorymodifymessage','Category Modified Successfully !');
+
+    }
+
+
+    public function ModifyContent(Request $request)
+    {  
+       $path = $request->file('image')->store('images');
+       $request->image->move(public_path('images'), $path);
+
+       $id=$request->con_id;
+       $content = Content::find($id);
+       $category->update(
+           [
+            'content_name' => $request->category_name,
+            'content_details' =>$request->content_details,
+            'links'=>$request->links,
+            'image'=>$path
+           ]
+       );
+       
+       return redirect()->route('ModifyMain')->with('contentmodifymessage','Content Modified Successfully !');
 
     }
 
